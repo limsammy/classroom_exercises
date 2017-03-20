@@ -14,9 +14,7 @@ class SuperFizzBuzz
     result << "Super" if divisible_by?(7)
     result << "Fizz" if divisible_by?(3)
     result << "Buzz" if divisible_by?(5)
-    if result.empty?
-      result << num.to_s
-    end
+    result << num.to_s if result.empty?
 
     result
   end
