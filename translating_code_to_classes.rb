@@ -10,10 +10,22 @@ class SuperFizzBuzz
     num % value == 0
   end
 
-  def run
+  def divide_by_7
     result << "Super" if divisible_by?(7)
+  end
+
+  def divide_by_3
     result << "Fizz" if divisible_by?(3)
+  end
+
+  def divide_by_5
     result << "Buzz" if divisible_by?(5)
+  end
+
+  def run
+    divide_by_7
+    divide_by_3
+    divide_by_5
     result << num.to_s if result.empty?
 
     result
