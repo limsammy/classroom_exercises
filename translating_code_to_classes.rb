@@ -22,11 +22,15 @@ class SuperFizzBuzz
     result << "Buzz" if divisible_by?(5)
   end
 
+  def validate_result
+    result << num.to_s if result.empty?
+  end
+
   def run
     divide_by_7
     divide_by_3
     divide_by_5
-    result << num.to_s if result.empty?
+    validate_result
 
     result
   end
